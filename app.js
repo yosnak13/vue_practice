@@ -2,7 +2,7 @@ var items = [
   {
     name: '鉛筆',
     price: 300,
-    quantity: 0
+    quantity: 10
   },
   {
     name: 'ノート',
