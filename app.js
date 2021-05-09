@@ -22,5 +22,3 @@ var vm = new Vue ({
     items: items
   }
 })
-
-window.vm = vm
