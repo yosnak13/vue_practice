@@ -40,6 +40,12 @@ var vm = new Vue ({
     },
     canBuy: function () {
       return this.totalPrice >= 1000 //1000円以上で購入可能
+    },
+    errorMessageStyle: function () {
+      return {
+        border: this.canBuy ? '' : '1px, solid, red',
+        color: this.canBuy ? '' : 'red'
+      }
     }
   }
 })
