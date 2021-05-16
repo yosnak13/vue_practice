@@ -23,6 +23,8 @@
     <p v-show='!canBuy'>
       {{ 1000 | numberWithDelimiter }}円以上から購入いただけます
     </p>
+    <!-- ボタンが押されたらメソッドを呼び出す -->
+    <button v-bind:disabled="!canBuy" v-on:click="doBuy">購入</button>
   </div>
 </div>
 
