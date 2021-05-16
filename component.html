@@ -2,19 +2,16 @@
 <title>Vue.jsでcomponet</title>
 <script src="https://unpkg.com/vue@2.5.17"></script>
 
-<ul id="example">
-  <list-item></list-item>
-</ul>
+<div id="fruits-list">
+  <fruits-list-title></fruits-list-title>
+</div>
 
 <script>
-  // コンポーネント
-  Vue.component('list-item', {
-    template: '<li>foo {{ contents }} </li>',
-    data: function (){
-      return { contents: 'bar'}
-    }
+  Vue.component('fruits-list-title', {
+    template: '<h1>フルーツ一覧</h1>'
   })
 
-  // ルート'Vue'インスタンスの作成
-  new Vue({ el: '#example' })
+  new Vue({
+    el: '#fruits-list'
+  })
 </script>
