@@ -9,9 +9,8 @@
     <ul>
       <!-- 各商品の単価と購入リストを表示する -->
       <li v-for="item in items" v-bind:key="item.name">
-        {{ item.name }}の個数：<input type="number" v-on:input="item.quantity = $event.target.value"
+        {{ item.name }}の個数：<input type="number" v-on:change="item.quantity = $event.target.value"
         v-bind:value="item.quantity" min="0">
-        <!-- {{ item.name }}: {{item.price}} x {{ item.quantity }} = {{item.price * item.quantity | numberWithDelimiter }}円 -->
       </li>
     </ul>
     <p>{{ items[0].name }}: {{ items[0].price }} x {{ items[0].quantity }}</p>
